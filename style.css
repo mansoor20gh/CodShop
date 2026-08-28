@@ -203,6 +203,24 @@ header {
   color: #db071c;
   font-size: 15px;
 }
+.container-count {
+  position: relative;
+  display: inline-block;
+}
+.count-product {
+  position: absolute;
+  color: white;
+  background-color: #db071ca9;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  align-items: center;
+  justify-content: center;
+  /* display: flex; */
+  transform: translate(-5px, -5px);
+  font-size: 12px;
+  display: none; 
+}
 @media screen and (max-width: 660px) {
   .card {
     height: clamp(200px, 25vh, 300px);
