@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  border: none;
+  outline: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  user-select: none;
+}
+:root {
+  --bg-color-body: #f0eff2;
+  --color-session: #f8f8fa;
+  --bg-color-btn: #db071c;
+  --bg-color-by: #101010;
+  --bg-color-hover: #bebebe;
+}
+body {
+  background-color: var(--bg-color-body);
+}
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--color-session);
+  border-radius: 10px;
+  width: calc(100% - 20px);
+  margin: 10px auto;
+  padding: 0 5px;
+}
+#logo_header {
+  max-width: 90px;
+  height: auto;
+}
+#cart,
+#menu {
+  border-radius: 70px;
+  width: 35px;
+  height: 35px;
+  background-color: var(--bg-color-btn);
+  align-items: center;
+  color: var(--color-session);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #menu:hover,
+  #cart:hover {
+    background-color: var(--color-session);
+    color: var(--bg-color-btn);
+  }
+}
+/** slideshow gallery  */
+.mySlides {
+  display: none;
+}
+.img-slideshow {
+  vertical-align: middle;
+  border-radius: 10px;
+}
+.slideshow-container {
+  width: 60%;
+  max-width: 60%;
+  position: relative;
+  margin: 0 auto 3vh auto;
+}
+.prev,
+.next {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* width: 40px;
+  height: 40px; */
+  width: clamp(8px, 5vw, 40px);
+  height: clamp(8px, 5vw, 40px);
+  top: 45%;
+  border-radius: 1000000px;
+  color: var(--color-session);
+  transition: 0.6s ease;
+  user-select: none;
+}
+.next-icon,
+.prev-icon {
+  font-size: clamp(5px, 3vw, 24px);
+}
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: var(--color-session);
+  color: var(--bg-color-btn);
+}
+
+.dot {
+  cursor: pointer;
+  width: clamp(10px, 2vw, 15px);
+  height: clamp(2px, 0.5vw, 4px);
+  border-radius: 5px;
+  margin: 0 2px;
+  background-color: var(--bg-color-body);
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+#dot-container {
+  position: absolute;
+  bottom: clamp(2px, 1vw, 15px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot:hover {
+  background-color: var(--bg-color-hover);
+}
+.active {
+  background-color: var(--bg-color-by);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/** menu card carousel */
+#card-carousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0 10px;
+  gap: 10px;
+  overflow-x: auto;
+}
+.img-card {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+.card {
+  background-color: #f8f8fa;
+  width: clamp(180px, 35%, 250px);
+  height: clamp(200px, 45vh, 300px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  user-select: none;
+  box-shadow: 0px 10px 15px -3px #0000001a;
+  flex-shrink: 0;
+  padding: 0 0 5px 0;
+}
+.info-card {
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+  padding: 5px 10px;
+  font-size: clamp(5px, 10vw, 15px);
+}
+.product-by {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding: 0 8px;
+}
+.product-name {
+  font-weight: bold;
+}
+.info-product {
+  color: #a0a0a0;
+}
+.by-btn {
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+  background-color: #101010;
+  color: #f8f8fa;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+.material-symbols-outlined {
+  font-size: 15px;
+}
+.price {
+  color: #db071c;
+  font-size: 15px;
+}
+@media screen and (max-width: 660px) {
+  .card {
+    height: clamp(200px, 25vh, 300px);
+  }
+}
+@media screen and (min-width: 700px) {
+  .by-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-height: 480px) {
+  .card {
+    height: clamp(200px, 70vh, 300px);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .by-btn:hover {
+    background-color: var(--bg-color-btn);
+    color: var(--bg-color-by);
+  }
+}

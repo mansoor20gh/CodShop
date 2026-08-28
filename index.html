@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <button id="cart">
+        <span class="material-symbols-outlined"> local_mall </span>
+      </button>
+      <img
+        src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+        alt="logo site"
+        id="logo_header"
+        draggable="false"
+      />
+      <button id="menu">
+        <span class="material-symbols-outlined"> menu </span>
+      </button>
+    </header>
+    <!--! slideshow gallery -->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="./po1.png" style="width: 100%" class="img-slideshow" draggable="false"/>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="./po2.png" style="width: 100%" class="img-slideshow" draggable="false"/>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)"
+        ><span class="material-symbols-outlined prev-icon"> chevron_left </span></a
+      >
+      <a class="next" onclick="plusSlides(1)"
+        ><span class="material-symbols-outlined next-icon"> chevron_right </span></a
+      >
+      <div id="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
+    </div>
+    <!--! menu card carousel  -->
+    <div id="card-carousel">
+      <!--* cards -->
+      <div class="card">
+        <img src="./po1.png" alt="" class="img-card" draggable="false"/>
+        <div class="info-card">
+          <p class="product-name">بادام</p>
+          <p class="info-product">قیمت هر کیلو</p>
+        </div>
+        <span class="product-by">
+          <p class="price">780000</p>
+          <button class="by-btn">
+            <span class="material-symbols-outlined"> add </span>
+          </button>
+        </span>
+      </div>
+      <div class="card">
+        <img src="./po1.png" alt="" class="img-card" draggable="false"/>
+        <div class="info-card">
+          <p class="product-name">بادام</p>
+          <p class="info-product">قیمت هر کیلو</p>
+        </div>
+        <span class="product-by">
+          <p class="price">780000</p>
+          <button class="by-btn">
+            <span class="material-symbols-outlined"> add </span>
+          </button>
+        </span>
+      </div>
+      <div class="card">
+        <img src="./po1.png" alt="" class="img-card" draggable="false"/>
+        <div class="info-card">
+          <p class="product-name">بادام</p>
+          <p class="info-product">قیمت هر کیلو</p>
+        </div>
+        <span class="product-by">
+          <p class="price">780000</p>
+          <button class="by-btn">
+            <span class="material-symbols-outlined"> add </span>
+          </button>
+        </span>
+      </div>
+      <div class="card">
+        <img src="./po1.png" alt="" class="img-card" draggable="false"/>
+        <div class="info-card">
+          <p class="product-name">بادام</p>
+          <p class="info-product">قیمت هر کیلو</p>
+        </div>
+        <span class="product-by">
+          <p class="price">780000</p>
+          <button class="by-btn">
+            <span class="material-symbols-outlined"> add </span>
+          </button>
+        </span>
+      </div>
+      <div class="card">
+        <img src="./po1.png" alt="" class="img-card" draggable="false"/>
+        <div class="info-card">
+          <p class="product-name">بادام</p>
+          <p class="info-product">قیمت هر کیلو</p>
+        </div>
+        <span class="product-by">
+          <p class="price">780000</p>
+          <button class="by-btn">
+            <span class="material-symbols-outlined"> add </span>
+          </button>
+        </span>
+      </div>
+      <div class="card">
+        <img src="./po1.png" alt="" class="img-card" draggable="false"/>
+        <div class="info-card">
+          <p class="product-name">بادام</p>
+          <p class="info-product">قیمت هر کیلو</p>
+        </div>
+        <span class="product-by">
+          <p class="price">780000</p>
+          <button class="by-btn">
+            <span class="material-symbols-outlined"> add </span>
+          </button>
+        </span>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
