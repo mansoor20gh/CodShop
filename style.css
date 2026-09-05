@@ -65,7 +65,7 @@ header {
   width: 60%;
   max-width: 60%;
   position: relative;
-  margin: 0 auto 3vh auto;
+  margin: 0 auto 1vh auto;
 }
 .prev,
 .next {
@@ -141,10 +141,9 @@ header {
 #card-carousel {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  padding: 0 10px;
+  flex-wrap: wrap;
   gap: 10px;
-  overflow-x: auto;
+  justify-content: center;
 }
 .img-card {
   width: 100%;
@@ -152,15 +151,18 @@ header {
 }
 .card {
   background-color: #f8f8fa;
-  width: clamp(180px, 35%, 250px);
+  width: clamp(100px, 30%, 250px);
   height: clamp(200px, 45vh, 300px);
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   user-select: none;
-  box-shadow: 0px 10px 15px -3px #0000001a;
-  flex-shrink: 0;
   padding: 0 0 5px 0;
+}
+@media screen and (min-width: 1500px) {
+  .card {
+    width: clamp(100px, 20%, 200px);
+  }
 }
 .info-card {
   display: flex;
@@ -219,7 +221,7 @@ header {
   /* display: flex; */
   transform: translate(-5px, -5px);
   font-size: 12px;
-  display: none; 
+  display: none;
 }
 @media screen and (max-width: 660px) {
   .card {
@@ -239,7 +241,49 @@ header {
 }
 @media (hover: hover) and (pointer: fine) {
   .by-btn:hover {
-    background-color: var(--bg-color-btn);
+    background-color: var(--color-session);
     color: var(--bg-color-by);
   }
+}
+/** footer  */
+hr {
+  width: 100%;
+  border: 1px solid var(--bg-color-hover);
+  border-radius: 5px;
+}
+.copy-container {
+  width: 90%;
+  margin: 5px auto;
+}
+#copyright {
+  font-size: 10px;
+  font-weight: bold;
+  color: #101010c0;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  text-align: left;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--color-session);
+  color: var(--bg-color-by);
+  width: 95%;
+  margin: 10px auto 0 auto;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px -10px 15px -3px #0000001a,0px 10px 15px -3px #0000001a;
+}
+.link {
+  color: var(--bg-color-by);
+}
+#search-box{
+  border-radius: 5px;
+  width: 60%;
+  padding: 5px;
+  margin: 0 auto 1vh auto;
+  display: block;
+  border: 1px dotted var(--bg-color-by);
 }

@@ -1,6 +1,7 @@
 let sliderX = document.querySelector(".slideshow-container");
 let slideIndex = 1;
-showSlides(slideIndex);
+
+window.addEventListener("load", (e) => showSlides(slideIndex));
 
 function plusSlides(n) {
   showSlides((slideIndex += n));
