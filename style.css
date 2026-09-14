@@ -1,3 +1,7 @@
+@font-face {
+  font-family: vasir;
+  src: url(./vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Thin-FD-WOL.woff2);
+}
 * {
   margin: 0;
   border: none;
@@ -5,6 +9,7 @@
   text-decoration: none;
   box-sizing: border-box;
   user-select: none;
+  font-family: var(--font-cart);
 }
 :root {
   --bg-color-body: #f0eff2;
@@ -15,6 +20,7 @@
   --color-text-info: #a0a0a0;
   --color-copyright: #101010c0;
   --color-shadow: #0000001a;
+  --font-cart: vasir;
 }
 body {
   background-color: var(--bg-color-body);
@@ -241,14 +247,12 @@ hr {
 .copy-container {
   width: 90%;
   margin: 5px auto;
+  /* margin: 80px auto; */
 }
 #copyright {
   font-size: 10px;
   font-weight: bold;
   color: var(--color-copyright);
-  font-family:
-    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
-    Arial, sans-serif;
   text-align: left;
 }
 .footer {
@@ -291,4 +295,90 @@ hr {
 }
 #cart {
   position: relative;
+}
+/** modal box  */
+.modal-cart {
+  background-color: var(--color-session);
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  padding: 10px;
+  border-radius: 5px;
+  transition: 1s ease;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  position: absolute;
+}
+#img-card-shopping-cart {
+  width: clamp(80px, 30%, 100px);
+}
+.card-shopping-cart {
+  display: flex;
+  flex-direction: row;
+  border: 1px dotted var(--bg-color-by);
+  width: 95%;
+  margin: 0 auto 5px auto;
+  border-radius: 5px;
+  padding: 0 5px;
+  justify-content: space-between;
+}
+.container-card-shopping-cart {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 50vh;
+}
+#price-shopping-cart {
+  text-align: center;
+  color: var(--bg-color-btn);
+  font-weight: bold;
+}
+#container-info-shopping-cart {
+  width: 100%;
+  text-align: right;
+}
+#title-product-shopping-cart {
+  font-weight: bold;
+}
+#separator-card-shopping-cart {
+  border: 1px solid var(--bg-color-hover);
+}
+.container-total-shopping-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  direction: rtl;
+  font-weight: bold;
+  line-height: 40px;
+}
+.modal-cart.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+}
+#final-btn-shopping-cart {
+  width: 60%;
+  margin: auto;
+  padding: 5px;
+  background-color: var(--bg-color-btn);
+  color: var(--color-session);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+#final-btn-shopping-cart:hover {
+  background-color: var(--color-session);
+  color: var(--bg-color-btn);
+}
+.hide-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #242424bf;
 }

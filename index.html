@@ -14,7 +14,7 @@
     <header>
       <button id="cart">
         <span class="material-symbols-outlined"> local_mall </span>
-         <p class="count-product-cart">0</p>
+        <p class="count-product-cart">0</p>
       </button>
       <img
         src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
@@ -60,7 +60,12 @@
         <span class="dot" onclick="currentSlide(2)"></span>
       </div>
     </div>
-    <input type="search" id="search-box" placeholder="دنبال چی میگردی؟" dir="rtl">
+    <input
+      type="search"
+      id="search-box"
+      placeholder="جستجو کنید..."
+      dir="rtl"
+    />
     <!--! menu card carousel  -->
     <div id="card-carousel">
       <!--* cards -->
@@ -173,6 +178,66 @@
         <p id="copyright">© 2026 ajil dagh. All rights reserved.</p>
       </span>
     </footer>
+    <!--! modal box  -->
+    <div class="hide-bg"></div>
+    <div class="modal-cart show">
+      <div class="container-card-shopping-cart">
+        <div class="card-shopping-cart">
+          <img
+            id="img-card-shopping-cart"
+            src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+            alt=""
+          />
+          <div id="container-info-shopping-cart">
+            <p id="title-product-shopping-cart">بادام</p>
+            <p id="weight-product-shopping-cart">200g</p>
+            <p id="price-shopping-cart">100,000</p>
+          </div>
+        </div>
+        <div class="card-shopping-cart">
+          <img
+            id="img-card-shopping-cart"
+            src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+            alt=""
+          />
+          <div id="container-info-shopping-cart">
+            <p id="title-product-shopping-cart">بادام</p>
+            <p id="weight-product-shopping-cart">200g</p>
+            <p id="price-shopping-cart">100,000</p>
+          </div>
+        </div>
+        <div class="card-shopping-cart">
+          <img
+            id="img-card-shopping-cart"
+            src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+            alt=""
+          />
+          <div id="container-info-shopping-cart">
+            <p id="title-product-shopping-cart">بادام</p>
+            <p id="weight-product-shopping-cart">200g</p>
+            <p id="price-shopping-cart">100,000</p>
+          </div>
+        </div>
+        <div class="card-shopping-cart">
+          <img
+            id="img-card-shopping-cart"
+            src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+            alt=""
+          />
+          <div id="container-info-shopping-cart">
+            <p id="title-product-shopping-cart">بادام</p>
+            <p id="weight-product-shopping-cart">200g</p>
+            <p id="price-shopping-cart">100,000</p>
+          </div>
+        </div>
+      </div>
+      <hr id="separator-card-shopping-cart" />
+      <div class="container-total-shopping-cart">
+        <p id="text-total-shopping-cart">جمع قیمت:</p>
+        <p id="total-price">0</p>
+      </div>
+      <button id="final-btn-shopping-cart">ثبت نهایی</button>
+    </div>
     <script src="./main.js"></script>
   </body>
 </html>
