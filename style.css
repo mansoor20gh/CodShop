@@ -21,6 +21,7 @@
   --color-copyright: #101010c0;
   --color-shadow: #0000001a;
   --font-cart: vasir;
+  --bg-color-menu: #ffffff;
 }
 body {
   background-color: var(--bg-color-body);
@@ -35,13 +36,16 @@ header {
   width: calc(100% - 20px);
   margin: 10px auto;
   padding: 0 5px;
+  position:sticky;
+  z-index: 10;
+  top: 5px;
 }
 #logo_header {
   max-width: 90px;
   height: auto;
 }
 #cart,
-#menu {
+#menu-btn {
   border-radius: 70px;
   width: 35px;
   height: 35px;
@@ -56,11 +60,41 @@ header {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  #menu:hover,
+  #menu-btn:hover,
   #cart:hover {
     background-color: var(--color-session);
     color: var(--bg-color-btn);
   }
+}
+.container-menu{
+  position: relative;
+}
+#menu{
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  flex-direction: column;
+  padding: 5px;
+  direction: rtl;
+  background-color: var(--bg-color-menu);
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  transform: translate(7%,-5%);
+  width: clamp(100px,20vw,150px);
+  height: clamp(100px,10vh,150px);
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px -3px var(--color-shadow);
+  transition: 0.6s ease;
+}
+#menu a{
+  text-decoration: none;
+  color: var(--bg-color-by);
+  font-weight: bold;
+  transition: 0.6s ease;
+}
+#menu a:hover{
+  color: var(--bg-color-btn);
 }
 /** slideshow gallery  */
 .mySlides {
@@ -381,4 +415,5 @@ hr {
   width: 100%;
   height: 100%;
   background-color: #242424bf;
+  display: none;
 }
