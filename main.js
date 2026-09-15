@@ -1,8 +1,11 @@
 let sliderX = document.querySelector(".slideshow-container");
+let menuBtn = document.querySelector("#menu-btn");
+let menu = document.querySelector(".menu");
 let slideIndex = 1;
 
 window.addEventListener("load", (e) => showSlides(slideIndex));
-
+menuBtn.addEventListener("click", toggleMenu);
+//* Slider
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }
@@ -48,3 +51,13 @@ sliderX.addEventListener("touchend", (e) => {
     }
   }
 });
+
+//* menu
+function toggleMenu() {
+  menu.classList.toggle("show");
+  if (menu.classList.contains("show")) {
+    menuBtn.childNodes[1].innerHTML = "close";
+  } else {
+    menuBtn.childNodes[1].innerHTML = "menu";
+  }
+}
