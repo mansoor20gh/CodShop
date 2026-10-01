@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product</title>
+    <link rel="stylesheet" href="product.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body>
+    <!--! header  -->
+    <header>
+      <button id="cart">
+        <span class="material-symbols-outlined"> local_mall </span>
+        <p class="count-product-cart">0</p>
+      </button>
+      <img
+        src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+        alt="logo site"
+        id="logo_header"
+        draggable="false"
+      />
+      <div class="container-menu">
+        <button id="menu-btn">
+          <span class="material-symbols-outlined"> menu </span>
+        </button>
+        <div class="menu">
+          <a href="#">ارتباط با ما</a>
+          <a href="#">سازنده</a>
+        </div>
+      </div>
+    </header>
+    <!--! product  -->
+    <div class="product-order-container">
+      <!--! details  -->
+      <div class="product-details">
+        <img src="./po1.png" alt="product" id="product-image" />
+        <p id="title-product">بادام</p>
+        <p id="product-description">طعم باربیکیو</p>
+        <span id="price-container">
+          <p id="price-product">100,00</p>
+          <p id="lable-price">قیمت هر کیلوگرم</p>
+        </span>
+        <strong id="note">مبنای زیر گرم است</strong>
+        <div class="box-weight">
+          <button id="add">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M6 12H18"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 18V6"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <p id="show-weight">0</p>
+          <button id="remove">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M20.75 12C20.75 12.4142 20.4142 12.75 20 12.75H4C3.58579 12.75 3.25 12.4142 3.25 12C3.25 11.5858 3.58579 11.25 4 11.25H20C20.4142 11.25 20.75 11.5858 20.75 12Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+        <span>
+          <button class="preset-button">200,000 تومان</button>
+          <button class="preset-button">500,000 تومان</button>
+          <button class="preset-button">1kg</button>
+          <button class="preset-button">500g</button>
+        </span>
+        <span id="by-container">
+          <p id="price-product-all">0</p>
+          <button class="add-to-cart-btn">افزودن به سبد خرید</button>
+        </span>
+      </div>
+      <!--! order -->
+      <div class="order-list">
+        <div class="container-card-shopping-cart">
+          <div class="card-shopping-cart">
+            <img
+              id="img-card-shopping-cart"
+              src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+              alt=""
+            />
+            <div id="container-info-shopping-cart">
+              <p id="title-product-shopping-cart">بادام</p>
+              <p id="weight-product-shopping-cart">200g</p>
+              <p id="price-shopping-cart">100,000</p>
+            </div>
+          </div>
+          <div class="card-shopping-cart">
+            <img
+              id="img-card-shopping-cart"
+              src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+              alt=""
+            />
+            <div id="container-info-shopping-cart">
+              <p id="title-product-shopping-cart">بادام</p>
+              <p id="weight-product-shopping-cart">200g</p>
+              <p id="price-shopping-cart">100,000</p>
+            </div>
+          </div>
+          <div class="card-shopping-cart">
+            <img
+              id="img-card-shopping-cart"
+              src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+              alt=""
+            />
+            <div id="container-info-shopping-cart">
+              <p id="title-product-shopping-cart">بادام</p>
+              <p id="weight-product-shopping-cart">200g</p>
+              <p id="price-shopping-cart">100,000</p>
+            </div>
+          </div>
+          <div class="card-shopping-cart">
+            <img
+              id="img-card-shopping-cart"
+              src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+              alt=""
+            />
+            <div id="container-info-shopping-cart">
+              <p id="title-product-shopping-cart">بادام</p>
+              <p id="weight-product-shopping-cart">200g</p>
+              <p id="price-shopping-cart">100,000</p>
+            </div>
+          </div>
+        </div>
+        <hr id="separator-card-shopping-cart" />
+        <div class="container-total-shopping-cart">
+          <p id="text-total-shopping-cart">جمع قیمت:</p>
+          <p id="total-price">0</p>
+        </div>
+        <button id="final-btn-shopping-cart">ثبت نهایی</button>
+      </div>
+    </div>
+    <!--! footer  -->
+    <footer class="footer">
+      <div class="description-container">
+        <img
+          src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+          alt=""
+          id="logo_header"
+        />
+        <address></address>
+      </div>
+      <div class="links-container">
+        <a class="link contact" href="#">ارتباط با ما</a>
+      </div>
+      <span class="copy-container">
+        <hr />
+        <p id="copyright">© 2026 ajil dagh. All rights reserved.</p>
+      </span>
+    </footer>
+    <!--! modal cart -->
+    <div class="hide-bg"></div>
+    <div class="modal-cart">
+      <div class="container-card-shopping-cart">
+        <div class="card-shopping-cart">
+          <img
+            id="img-card-shopping-cart"
+            src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+            alt=""
+          />
+          <div id="container-info-shopping-cart">
+            <p id="title-product-shopping-cart">بادام</p>
+            <p id="weight-product-shopping-cart">200g</p>
+            <p id="price-shopping-cart">100,000</p>
+          </div>
+        </div>
+        <div class="card-shopping-cart">
+          <img
+            id="img-card-shopping-cart"
+            src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+            alt=""
+          />
+          <div id="container-info-shopping-cart">
+            <p id="title-product-shopping-cart">بادام</p>
+            <p id="weight-product-shopping-cart">200g</p>
+            <p id="price-shopping-cart">100,000</p>
+          </div>
+        </div>
+        <div class="card-shopping-cart">
+          <img
+            id="img-card-shopping-cart"
+            src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+            alt=""
+          />
+          <div id="container-info-shopping-cart">
+            <p id="title-product-shopping-cart">بادام</p>
+            <p id="weight-product-shopping-cart">200g</p>
+            <p id="price-shopping-cart">100,000</p>
+          </div>
+        </div>
+        <div class="card-shopping-cart">
+          <img
+            id="img-card-shopping-cart"
+            src="./ChatGPT Image Aug 21, 2026, 10_15_40 AM.png"
+            alt=""
+          />
+          <div id="container-info-shopping-cart">
+            <p id="title-product-shopping-cart">بادام</p>
+            <p id="weight-product-shopping-cart">200g</p>
+            <p id="price-shopping-cart">100,000</p>
+          </div>
+        </div>
+      </div>
+      <hr id="separator-card-shopping-cart" />
+      <div class="container-total-shopping-cart">
+        <p id="text-total-shopping-cart">جمع قیمت:</p>
+        <p id="total-price">0</p>
+      </div>
+      <button id="final-btn-shopping-cart">ثبت نهایی</button>
+    </div>
+    <script src="./product.js"></script>
+  </body>
+</html>

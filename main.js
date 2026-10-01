@@ -4,7 +4,6 @@ let menu = document.querySelector(".menu");
 let cartBtn = document.querySelector("#cart");
 let modalCart = document.querySelector(".modal-cart");
 let hideBG = document.querySelector(".hide-bg");
-// let titleProducts = document.querySelectorAll(".product-name");
 let searchBox = document.querySelector("#search-box");
 let products = document.querySelectorAll(".card");
 let slideIndex = 1;
