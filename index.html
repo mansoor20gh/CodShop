@@ -51,19 +51,19 @@
           draggable="false"
         />
       </div>
-      <a class="prev" onclick="plusSlides(-1)"
+      <a class="prev"
         ><span class="material-symbols-outlined prev-icon">
           chevron_left
         </span></a
       >
-      <a class="next" onclick="plusSlides(1)"
+      <a class="next"
         ><span class="material-symbols-outlined next-icon">
           chevron_right
         </span></a
       >
       <div id="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot one"></span>
+        <span class="dot two"></span>
       </div>
     </div>
     <input
@@ -74,97 +74,8 @@
     />
     <!--! menu card carousel  -->
     <div id="card-carousel">
-      <!--* cards -->
-      <div class="card">
-        <img src="./po1.png" alt="" class="img-card" draggable="false" />
-        <div class="info-card">
-          <p class="product-name">بادام</p>
-          <p class="info-product">قیمت هر کیلو</p>
-        </div>
-        <span class="product-by">
-          <p class="price">780000</p>
-          <span class="container-count">
-            <a href="product.html" class="by-btn">
-              <span class="material-symbols-outlined"> add </span>
-            </a>
-          </span>
-        </span>
-      </div>
-      <div class="card">
-        <img src="./po1.png" alt="" class="img-card" draggable="false" />
-        <div class="info-card">
-          <p class="product-name">گردو</p>
-          <p class="info-product">قیمت هر کیلو</p>
-        </div>
-        <span class="product-by">
-          <p class="price">780000</p>
-          <span class="container-count">
-            <a href="product.html" class="by-btn">
-              <span class="material-symbols-outlined"> add </span>
-            </a>
-          </span>
-        </span>
-      </div>
-      <div class="card">
-        <img src="./po1.png" alt="" class="img-card" draggable="false" />
-        <div class="info-card">
-          <p class="product-name">چیپس</p>
-          <p class="info-product">قیمت هر کیلو</p>
-        </div>
-        <span class="product-by">
-          <p class="price">780000</p>
-          <span class="container-count">
-            <a href="product.html" class="by-btn">
-              <span class="material-symbols-outlined"> add </span>
-            </a>
-          </span>
-        </span>
-      </div>
-      <div class="card">
-        <img src="./po1.png" alt="" class="img-card" draggable="false" />
-        <div class="info-card">
-          <p class="product-name">چیپس</p>
-          <p class="info-product">قیمت هر کیلو</p>
-        </div>
-        <span class="product-by">
-          <p class="price">780000</p>
-          <span class="container-count">
-            <a href="product.html" class="by-btn">
-              <span class="material-symbols-outlined"> add </span>
-            </a>
-          </span>
-        </span>
-      </div>
-      <div class="card">
-        <img src="./po1.png" alt="" class="img-card" draggable="false" />
-        <div class="info-card">
-          <p class="product-name">بادام</p>
-          <p class="info-product">قیمت هر کیلو</p>
-        </div>
-        <span class="product-by">
-          <p class="price">780000</p>
-          <span class="container-count">
-            <a href="product.html" class="by-btn">
-              <span class="material-symbols-outlined"> add </span>
-            </a>
-          </span>
-        </span>
-      </div>
-      <div class="card">
-        <img src="./po1.png" alt="" class="img-card" draggable="false" />
-        <div class="info-card">
-          <p class="product-name">بادام</p>
-          <p class="info-product">قیمت هر کیلو</p>
-        </div>
-        <span class="product-by">
-          <p class="price">780000</p>
-          <span class="container-count">
-            <a href="product.html" class="by-btn">
-              <span class="material-symbols-outlined"> add </span>
-            </a>
-          </span>
-        </span>
-      </div>
+      <!--! cards in js import from DB  -->
+  
     </div>
     <!--! footer -->
     <footer class="footer">
@@ -244,6 +155,6 @@
       </div>
       <button id="final-btn-shopping-cart">ثبت نهایی</button>
     </div>
-    <script src="./main.js"></script>
+    <script src="./main.js" type="module"></script>
   </body>
 </html>
