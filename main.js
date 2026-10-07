@@ -14,6 +14,8 @@ let prevBtn = document.querySelector(".prev");
 let nextBtn = document.querySelector(".next");
 let dot1 = document.querySelector(".one");
 let dot2 = document.querySelector(".two");
+let finalSendProductBtn = document.querySelector("#final-btn-shopping-cart");
+let informationBox = document.querySelector(".personal-information");
 let slideIndex = 1;
 
 window.addEventListener("load", (e) => showSlides(slideIndex));
@@ -32,6 +34,15 @@ dot1.addEventListener("click", () => {
 });
 dot2.addEventListener("click", () => {
   currentSlide(2);
+});
+finalSendProductBtn.addEventListener("click", sendProduct);
+document.addEventListener("click", (e) => {
+  if (
+    e.target.id != "menu-btn" &&
+    e.target.classList[0] != "material-symbols-outlined"
+  ) {
+   toggleMenu()
+  }
 });
 
 //* connect DB
@@ -101,7 +112,11 @@ function showModalCart() {
   document.body.style.overflow = "hidden";
 }
 function hideModalCart() {
-  modalCart.classList.remove("show");
+  if (modalCart.classList.contains("show")) {
+    modalCart.classList.remove("show");
+  } else if (informationBox.classList.contains("show")) {
+    informationBox.classList.remove("show");
+  }
   hideBG.style.display = "none";
   document.body.style.overflow = "auto";
 }
@@ -143,3 +158,16 @@ function showProduct(name, price, url) {
   containerCardProducts.insertAdjacentHTML("beforeend", productCart);
 }
 getProductInDB();
+
+//*send product to DB
+function sendProduct() {
+  showInformationBox();
+}
+//* information
+function showInformationBox() {
+  if (modalCart.classList.contains("show")) {
+    modalCart.classList.remove("show");
+  }
+  informationBox.classList.add("show");
+  hideBG.style.display = "block";
+}

@@ -115,7 +115,7 @@ header {
   visibility: hidden;
   opacity: 0;
   z-index: 10;
-  position: absolute;
+  position: fixed;
 }
 .modal-cart.show {
   opacity: 1;
@@ -380,7 +380,7 @@ hr {
   position: relative;
 }
 .hide-bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
